@@ -94,9 +94,12 @@
                 toastr.error("Invalid login credentials.");
                 if (errorResponse.status === 422) {
                     const errors = errorResponse.responseJSON.errors;
+                    console.log(errors)
                     $.each(errors, function (field, messages) {
                         $("#" + field + "-error").text(messages[0]);
                     });
+                }else {
+                    $("#emailOrUsername-error").text('The email or username field is required.');
                 }
             }
         });

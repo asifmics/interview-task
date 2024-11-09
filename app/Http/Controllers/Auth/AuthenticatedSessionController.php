@@ -23,7 +23,7 @@ class AuthenticatedSessionController extends Controller
     /**
      * Handle an incoming authentication request.
      */
-    public function store(Request $request): JsonResponse
+    public function store(Request $request)
     {
         $request->validate([
             'emailOrUsername' => ['required', 'string'],
@@ -38,6 +38,7 @@ class AuthenticatedSessionController extends Controller
             return response()->json(['redirect' => route('dashboard')]);
         } else {
             session()->flash('failed', 'Invalid login credentials');
+           // return response()->json(['status' => 422, 'errors' => ['email' => 'aasd', 'password' =>'password']]);
         }
 
     }

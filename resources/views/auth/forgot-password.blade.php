@@ -20,7 +20,7 @@
                     </div>
                     <div class="btn_wrapper single_input d-flex gap-2">
                         <button type="button" class="cmn_btn w-100 radius-5">Submit</button>
-                        <a href="{{ route('login') }}" class="cmn_btn outline_btn w-100 radius-5">Cancel</a>
+                        <a href="{{ route('login') }}" style="" class="btn btn-primary outline_btn w-100 radius-5">Cancel</a>
                     </div>
                 </form>
             </div>
